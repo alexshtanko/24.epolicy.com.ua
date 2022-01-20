@@ -1857,6 +1857,9 @@ function medicalm_insurance_create_order(){
 
                 $order_id = $wpdb->insert_id;
 
+                //Итоговая стоимость договра
+                $total_rate_price = $rate_price * $rate_coefficient * $rate_price_coefficient;
+
                 // $result['message'][] = 'Номер бланка совпадает с диапазоном';
 //                 $result['message'][] = $order_id;
 //                 $result['message'][] = $data;
@@ -1881,6 +1884,8 @@ function medicalm_insurance_create_order(){
 
                         $rate_coefficient = $coefficient_data['coefficient'];
 
+                        //Итоговая стоимость договра
+                        $total_rate_price += $rate_coefficient * $rate_price * $rate_price_coefficient;
 
                         $insurer_query = $wpdb->insert($table_name, array('order_id' => $order_id, 'last_name' => $insurer_last_name, 'name' => $insurer_name, 'birthday' => $insurer_date, 'passport' => $insurer_passport, 'address' => $insurer_address, 'coefficient' => $rate_coefficient, 'price' => $rate_price),
                             array('%d', '%s', '%s', '%s', '%s', '%s', '%f', '%f'));
@@ -2344,8 +2349,8 @@ function medicalm_insurance_create_order(){
     <input type="hidden" name="pay_type"  value="pay"/>
     <input type="hidden" name="fio" value="' . $surname . ' ' . $name . '"/>
     <input type="hidden" name="mail" value="' . $email . '"/>
-    <input type="hidden" id="plata" name="plata"  value="Оплата за страховий договiр '. $order_id .'" />
-    <input type="hidden" id="paid" name="paid"  value="1000"/>
+    <input type="hidden" id="plata" name="plata"  value="Оплата за страховий договiр № '. $order_id .'" />
+    <input type="hidden" id="paid" name="paid"  value="' . $total_rate_price . '"/>
     <input type="hidden" id="menu" name="menu"  value="UAH"/>
     <input class="get-new-medical-order" type="submit" value="Cплатити" /></form>';
                         $result['order_id'] = $wpdb->insert_id;
