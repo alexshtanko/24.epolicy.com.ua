@@ -320,7 +320,7 @@ jQuery(document).ready(function(){
                 rate_coefficient = jQuery('input[name="rate_coefficient"]').val();
 
                 rate_price_coefficient = jQuery('#priceCoefficient').val()*1;
-                if( rate_price_coefficient == '' ){
+                if( isNaN( rate_price_coefficient ) ){
                     rate_price_coefficient = 1;
                 }
                 console.log('rate_price_coefficient: ' + rate_price_coefficient);
