@@ -2333,7 +2333,7 @@ function medicalm_insurance_create_order(){
                     else
                     {
                         $result['status'] = true;
-                        $result['message'][] = '<span class="message-ok">Вітаємо, данi введенi вiрно, залишилося сплатити за полiс.</span>' . $rate_price_coefficient;
+                        $result['message'][] = '<span class="message-ok">Вітаємо, данi введенi вiрно, залишилося сплатити за полiс.</span>';
 //                        $result['last_step_html'] = '<a class="get-new-medical-order" href="/medical">Оформити новий поліс</a><a target="_blank" class="download-medical-order" href="/wp-content/plugins/insurance/order-print/electronic-form/electronic-form.php?order_id=' . $order_id . '&key=kDCRa89dc0e1">Скачати поліс</a>;
                         $result['last_step_html'] = '<form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST">
     <input type="hidden" name="date" value="' . date("d.m.Y H:i:s" ) . '" required/>
@@ -2347,7 +2347,7 @@ function medicalm_insurance_create_order(){
     <input type="hidden" id="plata" name="plata"  value="Оплата за страховий договiр '. $order_id .'" />
     <input type="hidden" id="paid" name="paid"  value="1000"/>
     <input type="hidden" id="menu" name="menu"  value="UAH"/>
-    <input class="get-new-medical-order" type="submit" value="Оплатить" /></form>';
+    <input class="get-new-medical-order" type="submit" value="Cплатити" /></form>';
                         $result['order_id'] = $wpdb->insert_id;
 //                        $result['form'] = '<form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST" style="width: 197px;" >
 //    <input type="hidden" name="date" value=' . date("d.m.Y H:i:s" ) . ' required/>
