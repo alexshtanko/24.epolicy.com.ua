@@ -1,0 +1,381 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Intech\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-25 18:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.3; wp-5.7.2\n"
+"X-Domain: intech"
+
+#. number of items in the mini cart.
+#: inc/woocommerce.php:238
+#, php-format
+msgid "%d"
+msgid_plural "%d"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/function/theme-filter.php:43
+msgid "&nbsp;"
+msgstr ""
+
+#: inc/comments-list.php:50
+msgid "(Edit)"
+msgstr ""
+
+#: inc/template-tags.php:35
+msgid ", "
+msgstr ""
+
+#: 404.php:56
+msgid "404"
+msgstr ""
+
+#: 404.php:60
+msgid "404 Not Found"
+msgstr ""
+
+#: template-parts/content-none.php:22
+msgid "</a>."
+msgstr ""
+
+#: inc/template-tags.php:49
+msgid "</span>"
+msgstr ""
+
+#: inc/function/theme-widget.php:12 inc/function/theme-widget.php:23
+msgid "Add widgets here."
+msgstr ""
+
+#: template-parts/content-team.php:27
+msgid "Age :"
+msgstr ""
+
+#: 404.php:76
+msgid "Back To Home"
+msgstr ""
+
+#. Name of the template
+msgid "Blank Container"
+msgstr ""
+
+#. Name of the template
+msgid "Blank Page"
+msgstr ""
+
+#. Name of the template
+msgid "Blank Template for Home page"
+msgstr ""
+
+#: template-parts/content-team.php:30
+msgid "Blood Group :"
+msgstr ""
+
+#: inc/plugins-activation.php:33
+msgid "Breadcrumb Navxt"
+msgstr ""
+
+#: template-parts/content-project.php:26
+msgid "Category :"
+msgstr ""
+
+#: template-parts/content-project.php:20
+msgid "Client :"
+msgstr ""
+
+#: comments.php:79
+msgid "Comment"
+msgstr ""
+
+#: template-parts/content-quote.php:19 template-parts/content-summery.php:10
+msgid "Comments"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:32
+#, php-format
+msgctxt "comments title"
+msgid "No Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:34
+#, php-format
+msgctxt "comments title"
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins-activation.php:38
+msgid "Contact Form 7"
+msgstr ""
+
+#. %s: Name of current post
+#: template-parts/content-quote.php:32 template-parts/content-summery.php:33
+#, php-format
+msgid "Continue reading %s"
+msgstr ""
+
+#: inc/footer/footer-default.php:11 inc/footer/footer-one.php:11
+#: inc/footer/footer-two.php:161 inc/footer/footer-three.php:42
+msgid "Copyright 2020 Themepul All Rights Reserved."
+msgstr ""
+
+#: template-parts/content-project.php:34
+msgid "Date :"
+msgstr ""
+
+#: inc/demo.php:5
+msgid "Demo page"
+msgstr ""
+
+#: template-parts/content-team.php:37
+msgid "E-mail :"
+msgstr ""
+
+#: inc/template-tags.php:78
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/plugins-activation.php:23
+msgid "Elementor"
+msgstr ""
+
+#: comments.php:76
+msgid "Email"
+msgstr ""
+
+#: inc/header/top-header.php:30 inc/header/top-header2.php:23
+msgid "Email: "
+msgstr ""
+
+#: inc/function/theme-setup.php:44
+msgid "Footer Menu"
+msgstr ""
+
+#. URI of the theme
+msgid "http://wptf.themepul.com/intech"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.templatemonster.com/authors/themepul/"
+msgstr ""
+
+#: template-parts/content-summery.php:22
+msgid "In :"
+msgstr ""
+
+#. Name of the theme
+msgid "Intech"
+msgstr ""
+
+#: inc/plugins-activation.php:16
+msgid "intech Core"
+msgstr ""
+
+#: 404.php:68
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: template-parts/content-none.php:42
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: inc/plugins-activation.php:43
+msgid "Mailchimp"
+msgstr ""
+
+#: inc/function/theme-setup.php:43
+msgid "Main Menu"
+msgstr ""
+
+#: template-parts/content-team.php:60
+msgid "My history"
+msgstr ""
+
+#: comments.php:75
+msgid "Name"
+msgstr ""
+
+#: template-parts/content-page.php:27 template-parts/content-quote.php:41
+#: template-parts/content-summery.php:42
+msgid "Next Page"
+msgstr ""
+
+#: page.php:37 search.php:61 single.php:33
+msgid "Next Post"
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: inc/plugins-activation.php:28
+msgid "One Click Demo Import"
+msgstr ""
+
+#. Name of the template
+msgid "Onepage Template"
+msgstr ""
+
+#: 404.php:27 404.php:46
+msgid "Oops! That page can not be found."
+msgstr ""
+
+#: index.php:21
+msgid "Our Blog"
+msgstr ""
+
+#: template-parts/content-project.php:14
+msgid "our project history"
+msgstr ""
+
+#: template-parts/content-page.php:23 template-parts/content-quote.php:37
+#: template-parts/content-summery.php:38
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-team.php:41
+msgid "Phone :"
+msgstr ""
+
+#: comments.php:78 comments.php:124
+msgid "Post Comment"
+msgstr ""
+
+#: template-parts/content-page.php:28 template-parts/content-quote.php:42
+#: template-parts/content-summery.php:43
+msgid "Prev Page"
+msgstr ""
+
+#: page.php:38 search.php:62 single.php:34
+msgid "Prev Post"
+msgstr ""
+
+#: template-parts/content-project.php:17
+msgid "project Title :"
+msgstr ""
+
+#: template-parts/content-quote.php:50 template-parts/content-summery.php:51
+msgid "Read More"
+msgstr ""
+
+#: inc/plugins-activation.php:48
+msgid "Revolution Slider"
+msgstr ""
+
+#: searchform.php:3
+msgid "Search "
+msgstr ""
+
+#: searchform.php:2 searchform.php:3
+msgid "Search for:"
+msgstr ""
+
+#: search.php:17 search.php:34
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:27
+msgid "Shop order"
+msgstr ""
+
+#: inc/function/theme-widget.php:21
+msgid "Shop Widget"
+msgstr ""
+
+#. %d: total results
+#: woocommerce/loop/result-count.php:31
+#, php-format
+msgid "Showing all %d result"
+msgid_plural "Showing all %d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/loop/result-count.php:28
+msgid "Showing the single result"
+msgstr ""
+
+#: inc/function/theme-widget.php:10
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:24
+msgid "Skip to content"
+msgstr ""
+
+#: template-parts/content-none.php:35
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-project.php:24
+msgid "Status :"
+msgstr ""
+
+#. Author of the theme
+msgid "Themepul"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Themepul team presents absolutely fresh and powerful WordPress theme. It "
+"combines new technologies and functional design that helps to showcase your "
+"content in better way. This WordPress theme is developed with attention to "
+"details, so you can create effective presentation of a website easily. Enjoy "
+"building web pages with our product!"
+msgstr ""
+
+#: template-parts/content-project.php:37
+msgid "Value :"
+msgstr ""
+
+#: inc/woocommerce.php:233
+msgid "View your shopping cart"
+msgstr ""
+
+#: comments.php:77
+msgid "Website"
+msgstr ""
+
+#. 1: first result 2: last result 3: total results
+#: woocommerce/loop/result-count.php:36
+#, php-format
+msgctxt "with first and last result"
+msgid "Showing %1$d&ndash;%2$d of %3$d result"
+msgid_plural "Showing %1$d&ndash;%2$d of %3$d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins-activation.php:55
+msgid "woocommerce"
+msgstr ""
+
+#: template-parts/content-team.php:34
+msgid "Work Progress :"
+msgstr ""
+
+#: inc/comments-list.php:32
+msgid "Your comment is awaiting moderation."
+msgstr ""
