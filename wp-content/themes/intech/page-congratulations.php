@@ -1,5 +1,5 @@
 <?php
-
+get_header();
 
 $logFileName = $_SERVER['DOCUMENT_ROOT'] . "log.txt";
 //$name = 'Тестовый товар answer';
@@ -7,11 +7,13 @@ $logFileName = $_SERVER['DOCUMENT_ROOT'] . "log.txt";
 $message = " ---------- обновлен-----" . date('d.m.Y H:i:s') . "\n";
 
 $json = base64_decode($_POST['data']);
-$obj = json_decode($json, true);
+$result_data = $obj = json_decode($json, true);
 
-echo '<pre>';
-var_dump($obj);
-echo '</pre>';
+
+
+//echo '<pre>';
+//var_dump($obj);
+//echo '</pre>';
 
 foreach ($obj as $k => $v) {
     $message .= $k . " __ " . $v . "\n";
@@ -42,6 +44,27 @@ function insertdb($order_id1, $xdate, $transaction_id1, $status1, $summa1, $data
     }
 
 }
+
+?>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+<?php
+if( $result_data['status'] == "success" || $result_data['status'] == "sandbox" )
+{
+    echo 'Вітаємо! Договір оформлений успiшно, на вказану електронну адресу вислано доступ до вашого облiкового запису де Ви зможете скачати договiр.';
+}
+else
+{
+    echo 'Неуспішний платіж';
+}
+?>
+        </div>
+    </div>
+</div>
+
+<?php
+get_footer();
 
 if (isset($_POST['data'])) {
     $json = base64_decode($_POST['data']);
@@ -160,9 +183,9 @@ if (isset($_POST['data'])) {
         if ($hidden_content == '1') {
             $text .= "\n -------Данные для входа------- ";
             /*$text .=  "\n Логин: " . $user_login;*/
-            $text .= "\n Пароль:  " . $user_pass;
+//            $text .= "\n Пароль:  " . $user_pass;
             $text .= "\n Аренда контента на :  " . $secure_day . get_name($secure_day, ' День', ' Дня', ' Дней') . " (Время аренды начинает действовать после первого ввода пароля!)";
-            $text .= "\n Ссылка на страницу:  " . $user_url . "\n";
+//            $text .= "\n Ссылка на страницу:  " . $user_url . "\n";
         }
         if ($fio)
             $message = $text . " Имя - " . $fio;
@@ -178,7 +201,8 @@ if (isset($_POST['data'])) {
         $product_id = get_option($order_id_md5 . '-liqpay_product_id');
         global $wpdb, $table_prefix;
         $table_downloadcode = $table_prefix . 'liqpay_downloadcodes';
-        require_once('../../../wp-config.php');
+//        require_once('../../../wp-config.php');
+        require_once ('wp-config.php');
         $wpdb->insert($table_downloadcode,
             array('downloadcode' => $code, 'product_id' => $product_id, 'ctime' => $ctime),
             array('%s', '%d', '%d')
@@ -322,6 +346,7 @@ if (isset($_POST['data'])) {
     }
 }
 
+
 function send($long_url = FALSE, $short_url = FALSE)
 {
     $AUTH_KEY = "AIzaSyCZg4CwiBg_OEQD61V6-LVhymQdx9N7mSQ";
@@ -384,13 +409,4 @@ function curlSendRequest($strUrl, $post = array())
 }
 
 
-
- if( $status == "success" || $status == "sandbox" )
-{
-    echo 'Вітаємо! Договір оформлений.';
-}
-else
-{
-    echo 'Неуспішний платіж';
-}
 
