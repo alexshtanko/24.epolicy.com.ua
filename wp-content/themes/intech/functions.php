@@ -104,7 +104,7 @@ function epolicy_scripts() {
             'nonce' => wp_create_nonce( 'medical-m' ) // Create nonce which we later will use to verify AJAX request
         ));
 
-        wp_enqueue_script( 'medicalmcreateorder', get_template_directory_uri() . '/js/medical-m-create-order.js', array('jquery'), '1.0.161.21' );
+        wp_enqueue_script( 'medicalmcreateorder', get_template_directory_uri() . '/js/medical-m-create-order.js', array('jquery'), '1.0.161.22' );
 
         wp_localize_script( 'medicalmcreateorder', 'medicalmCreateOrder', array(
             'ajaxurl' => admin_url('admin-ajax.php'),
@@ -2333,18 +2333,18 @@ function medicalm_insurance_create_order(){
                     else
                     {
                         $result['status'] = true;
-                        $result['message'][] = '<span class="message-ok">Вітаємо, данi введенi вiрно, залишилося сплатити за полiс.</span>';
+                        $result['message'][] = '<span class="message-ok">Вітаємо, данi введенi вiрно, залишилося сплатити за полiс.</span>' . $rate_price_coefficient;
 //                        $result['last_step_html'] = '<a class="get-new-medical-order" href="/medical">Оформити новий поліс</a><a target="_blank" class="download-medical-order" href="/wp-content/plugins/insurance/order-print/electronic-form/electronic-form.php?order_id=' . $order_id . '&key=kDCRa89dc0e1">Скачати поліс</a>;
                         $result['last_step_html'] = '<form action="/wp-content/plugins/liqpay_wordpress/liqpay-form.php" method="POST">
     <input type="hidden" name="date" value="' . date("d.m.Y H:i:s" ) . '" required/>
-    <input type="hidden" name="liqpay_product_id"  value="' . $order_id . '"/>
+    <input type="hidden" name="order_id"  value="' . $order_id . '"/>
     <input type="hidden" name="hidden_content"  value="test content"/>
     <input type="hidden" name="url_page"  value="https://24.epolicy.com.ua/"/>
     <input type="hidden" name="ip"  value="' . $_SERVER['REMOTE_ADDR'] . '"/>
     <input type="hidden" name="pay_type"  value="pay"/>
-    <input type="hidden" name="fio" value=" . $name . "/>
-    <input type="hidden" name="mail" value=" . $email . "/>
-    <input type="hidden" id="plata" name="plata"  value="Оплата за страховой договор" />
+    <input type="hidden" name="fio" value="' . $surname . ' ' . $name . '"/>
+    <input type="hidden" name="mail" value="' . $email . '"/>
+    <input type="hidden" id="plata" name="plata"  value="Оплата за страховий договiр '. $order_id .'" />
     <input type="hidden" id="paid" name="paid"  value="1000"/>
     <input type="hidden" id="menu" name="menu"  value="UAH"/>
     <input class="get-new-medical-order" type="submit" value="Оплатить" /></form>';
