@@ -32,8 +32,10 @@ class Euroins
             $franchise = explode( ' ', $insurer_data['rate_franchise'] );
             $franchise = $franchise[0];
 
-            $username = 'TestPartners';
-            $password = 'uXT6%rNo';
+//            $username = 'TestPartners';
+            $username = '';
+//            $password = 'uXT6%rNo';
+            $password = '';
 
             $data = [
                 "insurer" => [

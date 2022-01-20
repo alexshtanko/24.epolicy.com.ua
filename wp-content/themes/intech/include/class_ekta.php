@@ -2,8 +2,10 @@
 
 class Ekta {
     const FILE_COOKIES = 'cookies_ekta.txt';
-    public $username = "vpodgurets";
-    public $password = "7051985";
+//    public $username = "vpodgurets";
+    public $username = "";
+//    public $password = "7051985";
+    public $password = "";
     public $loginUrl = "https://agent.insurs.online/auth/checking_login";
     public $createOrderUrl = "https://agent.insurs.online/handler/createOrder";
     public $path;

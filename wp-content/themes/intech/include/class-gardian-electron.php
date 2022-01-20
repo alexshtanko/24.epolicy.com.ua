@@ -3,8 +3,10 @@
 class GardianElectron
 {
     const FILE_COOKIES = 'cookies_gardian_electron.txt';
-    public $username = "Новосад_ОП";
-    public $password = "TMK6xGVuw1";
+//    public $username = "Новосад_ОП";
+    public $username = "";
+//    public $password = "TMK6xGVuw1";
+    public $password = "";
     public $siteUrl = "https://polis.grdn.com.ua/";
     public $loginUrl = "https://polis.grdn.com.ua/Home/Login";
     public $ordersTableUrl = "https://polis.grdn.com.ua/Home/TravelConTable";
